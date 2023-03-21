@@ -1,0 +1,101 @@
+@import '../../../scss/index.scss';
+
+.modal-publication {
+	height: 520px !important;
+
+	.ui.grid {
+		margin: 0;
+		height: 100%;
+	}
+
+	&__left {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__right {
+		padding: 0 !important;
+		height: 100%;
+	}
+}
+
+.comment-form {
+	position: absolute !important;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+
+	.field {
+		margin: 0 !important;
+		width: 100%;
+
+		.ui.input {
+			height: 60px;
+
+			input {
+				border: 0;
+				border-top: 1px solid $border-grey;
+				border-radius: 0;
+				padding-right: 80px;
+			}
+		}
+	}
+
+	.ui.button {
+		background-color: transparent;
+		margin: 0;
+		position: absolute;
+		right: 0;
+		height: 100%;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
+
+.comments {
+	height: calc(100% - 95px);
+	overflow-y: scroll;
+
+	.comment {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		border-bottom: 1px solid $border-grey;
+		color: $font-dark;
+
+		img {
+			margin-right: 15px !important;
+		}
+
+		p {
+			margin: 0;
+
+			&:first-of-type {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.actions {
+	height: 35px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	font-size: large;
+
+	i {
+		font-size: 22px !important;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.like.active {
+		color: $danger;
+	}
+}
